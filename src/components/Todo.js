@@ -22,10 +22,11 @@ export default function Todo({ todo }) {
     }
 
     return (
-        <div>
-            {todo.title}
+        <div className="todo">
+            
+            <h2 className={todo.complete ? 'text-line-through' : ''}>{todo.title}</h2>
             <button onClick={deleteTodo}>Delete</button>
-            <button onClick={completeTodo}>Complete</button>
+            <button onClick={completeTodo} className={todo.complete ? 'button-true' : 'button-false'}>Complete</button>
 
         </div>
     )
